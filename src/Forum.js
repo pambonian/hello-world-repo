@@ -146,7 +146,7 @@ class Forum extends Component {
                                     <li><span className="tag is-dark is-medium ">Payments</span></li>
                                     <li><span className="tag is-success is-medium ">Transfers</span></li>
                                     <li><span className="tag is-warning is-medium ">Balance</span></li>
-                                    <li><span className="tag is-medium ">Question</span></li>
+                                    <li><span className="tag is-medium ">Questions</span></li>
                                 </ul>
                             </aside>
                         </div>
