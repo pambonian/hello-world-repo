@@ -11,17 +11,19 @@ import Youtube from './Youtube';
 import Cover from './Cover';
 import Login from './Login';
 import Forum from './Forum';
+import InstaAlbum from './InstaAlbum';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         {/* <Cover /> */}
-        <Forum />
+        <InstaAlbum />
       </div>
     )
   }
 }
+
 
 export default App; //ES6 syntax for exporting
 
