@@ -1,39 +1,27 @@
-import logo from './logo.svg';
+import React, { Component } from 'react'
 import './App.css';
 
-const student = {
-  name: 'Bob',
-  class: 'Software Engineering 700',
-  semester: 'Fall 2022'
+
+// Components
+import Racing from './Racing';
+import Basketball from './Basketball';
+import Football from './Football';
+import Esports from './Esports';
+import Youtube from './Youtube';
+import Cover from './Cover';
+import Login from './Login';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Cover />
+      </div>
+    )
+  }
 }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <div>
-        <h1>{student.name}</h1>
-        <p>{student.class}</p>
-        <p>{student.semester}</p>
-      </div>
-      <div>
-        {(student.name === 'Cameron' ? student.class = 'Art' : student.class = 'SEI')}
-      </div>
-    </div>
-  );
-}
+export default App; //ES6 syntax for exporting
 
-export default App;
+// functional component -> made out of a function
+//class component -> is made out of a class
