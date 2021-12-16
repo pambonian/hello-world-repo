@@ -1,6 +1,66 @@
 import React, { Component } from 'react';
 import './Forum.css';
 
+const comment = {
+    message: 'I love coding. All day everyday....',
+    author: '@Patrick Brennan'
+}
+
+const commentList = [
+    {
+        message: 'I love bball....',
+        author: '@stephcurry'
+    },
+    {
+        message: 'What are those???? ....',
+        author: '@mike'
+    },
+    {
+        message: 'What up...',
+        author: '@ChrisRollins'
+    },
+    {
+        message: 'Comment here...',
+        author: '@Evalist'
+    },
+    {
+        message: 'Scenic Route Belongs Here',
+        author: '@JJackson'
+    },
+    {
+        message: 'Yo Yo Yo',
+        author: '@SaintNick'
+    }
+]
+
+const displayCommentList = commentList.map((c, idx) => {
+    return (
+        <article className="post" key={idx}>
+      <h4>{c.message}</h4>
+      <div className="media">
+        <div className="media-left">
+          <p className="image is-32x32">
+            <img src="http://bulma.io/images/placeholders/128x128.png" alt="" />
+          </p>
+        </div>
+        <div className="media-content">
+          <div className="content">
+            <p>
+              <a href="#">{c.author}</a> replied 34 minutes ago &nbsp;
+              <span className="tag">Question</span>
+            </p>
+          </div>
+        </div>
+        <div className="media-right">
+          <span className="has-text-grey-light"
+            ><i className="fa fa-comments"></i> 1</span
+          >
+        </div>
+      </div>
+    </article>
+    )
+})
+
 class Forum extends Component {
     render() {
         return (
@@ -92,7 +152,7 @@ class Forum extends Component {
                         <div className="column is-9">
                             <div className="box content">
                                 <article className="post">
-                                    <h4>Bulma: How do you center a button in a box?</h4>
+                                    <h4>{comment.message}</h4>
                                     <div className="media">
                                         <div className="media-left">
                                             <p className="image is-32x32">
@@ -102,7 +162,7 @@ class Forum extends Component {
                                         <div className="media-content">
                                             <div className="content">
                                                 <p>
-                                                    <a href="#">@jsmith</a> replied 34 minutes ago &nbsp;
+                                                    <a href="#">{comment.author}</a> replied 34 minutes ago &nbsp;
                                                     <span className="tag">Question</span>
                                                 </p>
                                             </div>
@@ -217,6 +277,7 @@ class Forum extends Component {
                                         </div>
                                     </div>
                                 </article>
+                                {displayCommentList}
                             </div>
                         </div>
                     </div>
