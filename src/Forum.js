@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Forum.css';
 
+
 const comment = {
     message: 'I love coding. All day everyday....',
     author: '@Patrick Brennan'

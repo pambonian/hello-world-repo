@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Forum from './Forum'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders dashboard tag', () => {
+  render(<Forum />);
+  const spanElement = screen.getByText(/Dashboard/i);
+  expect(spanElement).toBeInTheDocument();
 });
