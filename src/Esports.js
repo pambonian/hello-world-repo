@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import EsportsArticle from './EsportsArticle';
+
 const teamMember = {
     name: 'Ogre 2',
     team: 'Final Boss'
@@ -23,25 +25,28 @@ const teamMember = {
   }
   ]
 
-  const displayEsportsPlayers = esportsPayload.map((player, idx) => {
-    return(
-      <div key={idx}>
-        <h1>Name {player.name}</h1>
-        <p>Team {player.team}</p>
-      </div>
+  const displayPlayerMessages = esportsPayload.map((c, idx) => {
+    return (
+      <Article key={idx} index={idx} player={c.name} faction={c.team} />
     );
   });
 
   class Esports extends Component {
+    intro() {
+      console.log('I am from the Esports component....')
+  }
     render() {
         return (
             <div>
+              <div>
                 <h1>Esports</h1>
                 <div>
                     <h1>{teamMember.name}</h1>
                     <p>{teamMember.team}</p>
+                    <EsportsArticle index={99} message={this.props.team} person={this.props.name} />
                 </div>
-                {displayEsportsPlayers}
+                </div>
+                {displayEsportPlayers}
             </div>
         )
     }

@@ -10,15 +10,16 @@ import Esports from './Esports';
 import Youtube from './Youtube';
 import Cover from './Cover';
 import Login from './Login';
-import Forum from './Forum';
 import InstaAlbum from './InstaAlbum';
+import Forum from './Forum';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         {/* <Cover /> */}
-        <InstaAlbum />
+        <Forum />
       </div>
     )
   }

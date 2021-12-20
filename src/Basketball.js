@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import ArticleBasketball from './ArticleBasketball';
+
 const basketPlayer = {
     name: 'Steph Curry',
     team: 'Warriors'
@@ -23,6 +25,12 @@ const basketPlayer = {
   }
   ]
 
+  const displaybballPlayerList = bballPayload.map((c, idx) => {
+    return (
+        <ArticleBasketball key={idx} index={idx} team={c.team} person={c.name} />
+    )
+})
+
 class Basketball extends Component {
     render() {
         return (
@@ -32,21 +40,10 @@ class Basketball extends Component {
                     <h1>{basketPlayer.name}</h1>
                     <p>{basketPlayer.team}</p>
                 </div>
-                {displayBasketBallPlayers}
+                {displaybballPlayerList}
             </div>
         )
     }
 }
-
-
-  
-  const displayBasketBallPlayers = bballPayload.map((player, idx) => {
-    return(
-      <div key={idx}>
-        <h1>Name {player.name}</h1>
-        <p>Team {player.team}</p>
-      </div>
-    );
-  });
 
 export default Basketball;
